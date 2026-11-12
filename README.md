@@ -18,6 +18,11 @@
   <b>Motion graphics and visual effects; an open-source, professional motion graphics and visual effects studio, built in pure Rust.</b>
 </p>
 
+> **This repository** is a personal build of [EffectCraft](https://github.com/storytold/effectcraft)
+> with OpenFX (OFX 1.4) plug-in support: the `crates/ofx` host and the
+> `effectcraft-helper-ofx` external effect helper, which runs native plug-ins in their own
+> process so a crashing plug-in cannot take the app down. See [docs/ofx.md](docs/ofx.md).
+
 <p align="center">
   A free, open-source compositor: compositions, layers,
   keyframes, 308 effects, layer styles, expressions, 3D cameras and lights, and a render queue, native on macOS,

@@ -1,0 +1,22 @@
+[package]
+name = "effectcraft-helper-ofx"
+description = "OpenFX effect helper: runs OpenFX (OFX 1.4) plug-ins in their own process and offers them to EffectCraft over the external effect helper protocol (docs/external-helpers.md)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+# The OpenFX host has to speak the C ABI and call into native code, so the crate it lives in does
+# not opt into the workspace's `unsafe_code = "forbid"`. This binary itself is safe Rust.
+
+[lints]
+workspace = true
+
+[[bin]]
+name = "effectcraft-helper-ofx"
+path = "src/main.rs"
+
+[dependencies]
+effectcraft-effects = { workspace = true }
+effectcraft-helper-host = { workspace = true }
+effectcraft-ofx = { workspace = true }

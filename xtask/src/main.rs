@@ -61,6 +61,7 @@ const LAYERS: &[(&str, u8)] = &[
     ("format", 3),
     ("plugin", 3),
     ("helper-host", 3),
+    ("ofx", 3),
     ("interchange", 3),
     ("engine", 4),
     ("script", 4),
@@ -70,6 +71,7 @@ const LAYERS: &[(&str, u8)] = &[
     ("effectcraft", 6),
     ("cli", 6),
     ("web", 6),
+    ("helper-ofx", 6),
 ];
 
 /// Allowed same-layer edges (from, to).

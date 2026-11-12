@@ -94,5 +94,12 @@ doesn't know and creates it.
 Any language works: read lines, write prefixed lines, read and write a file. Rust helpers can
 use `effectcraft_helper_host::serve::serve` with a `Provider` that lists `EffectPlugin`s;
 `crates/helper-host/tests/it/main.rs` is a complete example and the protocol test that runs
-in `cargo xtask ci`. An unofficial OpenFX helper built this way lives in its own repository,
-[ec-extension-ofx](https://github.com/glumbis/ec-extension-ofx).
+in `cargo xtask ci`.
+
+### OpenFX
+
+`apps/effectcraft-helper-ofx` is the OpenFX helper. It wraps the `crates/ofx` OFX 1.4 host
+(the C ABI, the host suites, parameter mapping and bundle discovery) and offers every plug-in
+it finds as an effect. It is a separate process from EffectCraft, so an OFX plug-in that
+crashes takes down the helper and the effect shows an error; the app and the project keep
+running. See [ofx.md](ofx.md) for where it looks for plug-ins and how to install it.

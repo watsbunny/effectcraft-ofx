@@ -50,6 +50,7 @@ effectcraft-opusenc = { path = "crates/opusenc" }
 effectcraft-script = { path = "crates/script" }
 effectcraft-plugin = { path = "crates/plugin" }
 effectcraft-helper-host = { path = "crates/helper-host" }
+effectcraft-ofx = { path = "crates/ofx" }
 
 # foundation
 thiserror = "2"
@@ -78,6 +79,8 @@ exr = "1.74"
 image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
 same-file = "1.0"
 tempfile = "3.27"
+# OpenFX plug-in binaries are loaded at run time (crates/ofx).
+libloading = "0.8"
 
 # codecs + containers shared by the Craft apps (crates/media, crates/export); keep all three on one rev.
 craft-media = { version = "0.1.0", git = "https://github.com/storytold/craft-libs", rev = "e7c3dda7f3e339dd2c8d40fc4eb405472be1a1e4", default-features = false, features = ["isobmff", "matroska"] }
